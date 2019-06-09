@@ -4,7 +4,7 @@ def print_location(loc):
     """ This is a function that prints the players actual location."""
     print('')
     pass
-
+# these are functions that will print the name of the location in large cool letters
 def court():
 
     print('     _________                       __   ')
@@ -91,10 +91,5 @@ def alano():
     print('        \/          \/     \/        ')
 
 
-def the_squarefda():
-    print('')
-    print('')
-    print('')
-    print('')
-    print('')
-    print('')
+def player_movement():
+    pass

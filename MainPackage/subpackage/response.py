@@ -27,4 +27,5 @@ res2 = ["Hey now, let's communicate clearly with one another.",
 "You spelled that wrong.",
 "Remember that time you dropped out of college, I'm starting to see why.",
 "Willy, just because you messed up your life, doesn't mean you\nhave to mess up every command.",
-"I bet your English teacher hated you."]
+"I bet your English teacher hated you.",
+'"That\'s wrong, idiot." - My Mother']

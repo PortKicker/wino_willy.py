@@ -8,101 +8,101 @@ DOWN = 'DOWN', 'SOUTH', 'S'
 LEFT = 'LEFT', 'WEST', 'W'
 RIGHT = 'RIGHT', 'EAST', 'E'
 
-solved_places = {'a1': False, 'a2': False, 'a3': False
-                 'b1': False, 'b2': False, 'b3': False
+solved_places = {'a1': False, 'a2': False, 'a3': False,
+                 'b1': False, 'b2': False, 'b3': False,
                  'c1': False, 'c2': False, 'c3': False}
 
 
 game_map = {
-'a1' = {
-map_name: "",
+'a1' : {
+map_name: "Alano",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'a2' = {
+'a2' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'a3' = {
+'a3' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'b1' = {
+'b1' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'b2' = {
+'b2' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'b3' = {
+'b3' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'c1' = {
+'c1' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'c2' = {
+'c2' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
-'c3' = {
+'c3' : {
 map_name: "",
 DESCRIPTION : 'description',
 EXAMINATION : 'examine',
 SOLVED : False,
-UP : 'Up', 'North', 'N',
-DOWN : 'DOWN', 'SOUTH', 'S',
-LEFT : 'LEFT', 'WEST', 'W',
-RIGHT : 'RIGHT', 'EAST', 'E',
+UP : ['Up', 'North', 'N'],
+DOWN : ['DOWN', 'SOUTH', 'S'],
+LEFT : ['LEFT', 'WEST', 'W'],
+RIGHT : ['RIGHT', 'EAST', 'E'],
 },
 }
 

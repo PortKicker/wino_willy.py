@@ -4,8 +4,8 @@ import cmd
 import sys
 import os
 import time
-from subpackage import response
-from subpackage import functions
+from MainPackage.subpackage import response
+from MainPackage.subpackage import functions
 
 
 screen_width = 100
@@ -68,14 +68,14 @@ def intro():
        option = input('8===D ')
 
        if option.lower()  == 'play':
-            start_game() #not defined
+            functions.alley() #not defined
             pick = False
 
        elif option.lower() == 'quit':
             sys.exit()
 
        elif option.lower() == 'help':
-            help_menu() #not defined
+            help_menu() #needs more definition
             pick = False
 
        elif option.lower() == 'cheats':
@@ -87,13 +87,8 @@ def intro():
             continue
 
        else:
-            print(random.choice(res))
+            print(random.choice(response.res))
             continue
-
-
-
-
-
 
 
 
@@ -106,12 +101,3 @@ def intro():
 
 
 intro()
-
-class Player():
-    def __init__(self):
-        self.name = ""
-        self.hp = 0
-        self.inventory = []
-        self.location = 'Court'
-
-willy = Player()
