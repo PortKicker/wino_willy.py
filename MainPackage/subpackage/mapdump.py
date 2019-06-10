@@ -1,116 +1,71 @@
 
+class MapTile():
 
-DESCRIPTION = 'description'
-EXAMINATION = 'examine'
-SOLVED = False
-UP = 'Up', 'North', 'N'
-DOWN = 'DOWN', 'SOUTH', 'S'
-LEFT = 'LEFT', 'WEST', 'W'
-RIGHT = 'RIGHT', 'EAST', 'E'
+    def __init__(self , name, description, items):
 
-solved_places = {'a1': False, 'a2': False, 'a3': False,
-                 'b1': False, 'b2': False, 'b3': False,
-                 'c1': False, 'c2': False, 'c3': False}
+        self.name = name
+        self.description = description
+        self.items = items
+
+    def setMovements(self, movements):
+        self.movements = movements
+
+    def __str__(self):
+        print(f'this is the name of the room: {self.name}')
+        print(f'this is {self.description}')
+
+class Player():
+
+    def __init__(self, location):
+        self.location = location
+
+    def move(self, direction):
+        if self.location.movements[direction]:
+            self.location = self.location.movements[direction]
+            print( "*** Moved to room " + self.location.name + " ***")
+            print( self.location.description )
+        else:
+            print( "Cannot move that way!" )
 
 
-game_map = {
-'a1' : {
-map_name: "Alano",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'a2' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'a3' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'b1' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'b2' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'b3' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'c1' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'c2' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-'c3' : {
-map_name: "",
-DESCRIPTION : 'description',
-EXAMINATION : 'examine',
-SOLVED : False,
-UP : ['Up', 'North', 'N'],
-DOWN : ['DOWN', 'SOUTH', 'S'],
-LEFT : ['LEFT', 'WEST', 'W'],
-RIGHT : ['RIGHT', 'EAST', 'E'],
-},
-}
+court = MapTile('court', 'this is a courthouse', ['pen'])
+alano = MapTile('alano club', 'this is the alano club',['flyer'])
+skid_row = MapTile('Skid Row', 'this is skid row',[])
+disco = MapTile('Defunct Disco','this is a broken down disco',[])
+alley = MapTile('alley way','this is an alley way',[])
+dooley_st = MapTile('Dooley st.','this is dooley street',[])
+bus_stop = MapTile('bus stop','this is a bus stop',[])
+town_square = MapTile('town square','this is the town square',[])
+mini_mart = MapTile('mini mart', 'this is a mini mart',[])
+
+
+court.setMovements({"south":town_square})
+town_square.setMovements({"north":court, "east":dooley_st})
+dooley_st.setMovements({"north":alley,"west":town_square,"east": bus_stop})
+bus_stop.setMovements({"north":mini_mart,"west":dooley_st})
+mini_mart.setMovements({"south":bus_stop})
+alley.setMovements({"north":skid_row,"south":dooley_st})
+skid_row.setMovements({"east":disco,"west":alano,"south":alley})
+disco.setMovements({"west":skid_row})
+alano.setMovements({"east":skid_row})
+
+willy = Player(court)
+
+while True:
+
+    print(willy.location.name)
+    print(willy.location.description)
+    opt = input('> ').lower()
+    willy.move(opt)
+
+
+
 
 
          ####### MAP #######
 
       #     a1    a2   a3
-      #      ____________d
+      #      _____________
       #      |   |   |   | a3
       #      |___|___|___|
       #      |   |   |   | b3
